@@ -125,7 +125,7 @@ class Api
         }
 
         $client = $this->createClient();
-        $client->send($request, $response);
+        $client->sendRequest($request, $response);
 
         if (!$response->isSuccessful()) {
             throw new ApiException('Operation failed: ' . $response->getError(), $request, $response);
